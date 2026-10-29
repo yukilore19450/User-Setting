@@ -1,96 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>User Settings</title>
- <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Settings Dashboard</title>
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
- <script src="script.js"></script>
- <input type="checkbox" id="settings-toggle" class="modal-toggle">
 
- <label for="settings-toggle" class="btn-open">⚙ Open Settings</label>
+  <input type="checkbox" id="settings-toggle" class="modal-toggle">
 
- <div class="settings-box">
-  <form id="settingsForm" method="POST" action="#" enctype="multipart/form-data">
-   <fieldset>
-     <h1 id="user23">User Settings</h1>
+  <label for="settings-toggle" class="btn-open">
+    <span class="gear-icon">⚙</span> Open Settings
+  </label>
 
-    <div class="profile-upload-section">
-     <div class="avatar-preview" id="avatarPreviewContainer">P</div>
+  <div class="settings-box">
+    <form id="settingsForm" method="POST" action="#" enctype="multipart/form-data">
+      <fieldset>
+        
+        <div class="settings-header">
+          <h1 id="user23">User Settings</h1>
+          <p class="subtitle">Customize your profile and appearance</p>
+        </div>
 
-     <div class="profile-info">
-      <h3 class="profile-display-name" id="displayNameText">Your Name</h3>
-      <div class="upload-controls">
-        <label class="file-input-btn" for="avatarInput">Change avatar</label>
-        <input type="file" id="avatarInput" name="avatar" accept="image/*">
-      </div>
-     </div>
-    </div>
+        <div class="profile-upload-section">
+          <div class="avatar-preview" id="avatarPreviewContainer">P</div>
+          <div class="profile-info">
+            <h3 class="profile-display-name" id="displayNameText">Your Name</h3>
+            <div class="upload-controls">
+              <label class="file-input-btn" for="avatarInput">Change avatar</label>
+              <input type="file" id="avatarInput" name="avatar" accept="image/*">
+            </div>
+          </div>
+        </div>
 
-    <div class="form-group">
-     <label for="full_name">Name</label>
-     <input type="text" id="full_name" name="full_name" placeholder="Enter name here..." required oninput="document.getElementById('displayNameText').textContent = this.value.trim() || 'Your Name'">
-    </div>
+        <div class="form-group">
+          <label for="full_name">Display Name</label>
+          <input type="text" id="full_name" name="full_name" placeholder="Enter your display name..." required>
+        </div>
 
-    <div class="form-group">
-     <label for="bio">Bio</label>
-     <textarea id="bio" name="bio" placeholder="Tell us a bit about you" required></textarea>
-    </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" placeholder="Tell us a bit about yourself..."></textarea>
+        </div>
 
-    <div class="form-group">
-     <label for="notes">Notes</label>
-     <input type="text" id="notes" name="notes" placeholder="Notes (only visible to you)">
-    </div>
+        <div class="form-group">
+          <label for="notes">Private Notes</label>
+          <input type="text" id="notes" name="notes" placeholder="Notes (only visible to you)">
+        </div>
 
-    <div class="form-group">
-     <label for="birthday">Birthday</label>
-     <input type="date" id="birthday" name="birthday">
-    </div>
+        <div class="form-group">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="birthday">
+        </div>
 
-    <div class="form-group">
-     <label for="connection">Add Connection</label>
-     <select id="connection" name="connection">
-      <optgroup label="Gaming">
-        <option value="steam">Steam</option>
-        <option value="riot">Riot Games</option>
-      </optgroup>
-      <optgroup label="Social">
-        <option value="instagram">Instagram</option>
-        <option value="spotify">Spotify</option>
-      </optgroup>
-     </select>
-    </div>
+        <div class="form-group">
+          <label for="connection">Add Connection</label>
+          <select id="connection" name="connection">
+            <optgroup label="Gaming">
+              <option value="steam">Steam</option>
+              <option value="riot">Riot Games</option>
+            </optgroup>
+            <optgroup label="Social">
+              <option value="instagram">Instagram</option>
+              <option value="spotify">Spotify</option>
+            </optgroup>
+          </select>
+        </div>
 
-    <div class="form-group">
-     <label>Status</label>
-     <div class="choice-group">
-      <label><input type="radio" name="status" value="online" checked> Online</label>
-      <label><input type="radio" name="status" value="offline"> Offline</label>
-     </div>
-    </div>
+        <div class="form-group">
+          <label>Account Status</label>
+          <div class="choice-group">
+            <label><input type="radio" name="status" value="online" checked> Online</label>
+            <label><input type="radio" name="status" value="offline"> Offline</label>
+          </div>
+        </div>
 
-    <div class="form-group">
-     <label>Options</label>
-     <p class="hint-text">Check options to apply settings</p>
-     <div class="choice-group">
-      <label><input type="checkbox" name="show_conn" value="yes"> Show Connections</label>
-      <label><input type="checkbox" name="allow_dm" value="yes"> Allow DMs</label>
-     </div>
-    </div>
+        <div class="form-group">
+          <label>Preferences</label>
+          <p class="hint-text">Configure your privacy rules</p>
+          <div class="choice-group">
+            <label><input type="checkbox" name="show_conn" value="yes"> Show Connections</label>
+            <label><input type="checkbox" name="allow_dm" value="yes"> Allow DMs</label>
+          </div>
+        </div>
 
-    <div class="action-row">
-     <button type="submit" class="btn-submit">Save Changes</button>
-     <label for="settings-toggle" class="btn-close">Close</label>
-    </div>
+        <div class="action-row">
+          <button type="submit" class="btn-submit">Save Changes</button>
+          <label for="settings-toggle" class="btn-close">Cancel</label>
+        </div>
 
-   </fieldset>
-  </form>
- </div>
+      </fieldset>
+    </form>
+  </div>
 
- <div id="toast">✨ Settings saved successfully!</div>
- 
+  <div id="toast">✨ Settings updated successfully!</div>
+
+  <script src="index.js"></script>
 </body>
 </html>
