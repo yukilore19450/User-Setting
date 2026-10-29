@@ -3,22 +3,23 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="index.css">
  <title>User Settings</title>
+ <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
  <input type="checkbox" id="settings-toggle" class="modal-toggle">
 
- <label for="settings-toggle" class="btn-open"><h1>⚙ Open Settings</h1></label>
+ <label for="settings-toggle" class="btn-open">⚙ Open Settings</label>
 
  <div class="settings-box">
-  <form method="POST" action="#" enctype="multipart/form-data">
+  <form id="settingsForm" method="POST" action="#" enctype="multipart/form-data">
    <fieldset>
      <h1 id="user23">User Settings</h1>
 
     <div class="profile-upload-section">
-     <div class="avatar-preview">P</div>
+     <div class="avatar-preview" id="avatarPreviewContainer">P</div>
 
      <div class="profile-info">
       <h3 class="profile-display-name" id="displayNameText">Your Name</h3>
@@ -81,13 +82,18 @@
     </div>
 
     <div class="action-row">
-     <input type="submit" class="btn-submit" value="Save Changes">
+     <button type="submit" class="btn-submit">Save Changes</button>
      <label for="settings-toggle" class="btn-close">Close</label>
     </div>
 
    </fieldset>
   </form>
  </div>
+
+ <div id="toast">✨ Settings saved successfully!</div>
+
+ <!-- JavaScript Script Link -->
+ <script src="script.js"></script>
 
 </body>
 </html>
