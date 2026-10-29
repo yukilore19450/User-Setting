@@ -1,5 +1,12 @@
+const fullNameInput = document.getElementById('full_name');
+const displayNameText = document.getElementById('displayNameText');
 const avatarInput = document.getElementById('avatarInput');
 const avatarPreviewContainer = document.getElementById('avatarPreviewContainer');
+
+fullNameInput.addEventListener('input', function() {
+  const value = this.value.trim();
+  displayNameText.textContent = value || 'Your Name';
+});
 
 avatarInput.addEventListener('change', function(event) {
   const file = event.target.files[0];
@@ -7,7 +14,7 @@ avatarInput.addEventListener('change', function(event) {
     const reader = new FileReader();
     reader.onload = function(e) {
       avatarPreviewContainer.style.backgroundImage = `url('${e.target.result}')`;
-      avatarPreviewContainer.textContent = ''; 
+      avatarPreviewContainer.textContent = '';
     }
     reader.readAsDataURL(file);
   }
@@ -18,11 +25,9 @@ const settingsToggle = document.getElementById('settings-toggle');
 const toast = document.getElementById('toast');
 
 settingsForm.addEventListener('submit', function(e) {
-  e.preventDefault(); 
+  e.preventDefault();
 
-  
   toast.classList.add('show');
-
   settingsToggle.checked = false;
 
   setTimeout(() => {
