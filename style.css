@@ -13,10 +13,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-image: url("blue.jfif");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .modal-toggle {
@@ -151,7 +147,7 @@ h1#user23 {
   background: linear-gradient(135deg, #818cf8, #4f46e5);
   background-size: cover;
   background-position: center;
-  object-fit: cover;
+  background-repeat: no-repeat;
   border: 2px solid #6366f1;
   display: flex;
   align-items: center;
