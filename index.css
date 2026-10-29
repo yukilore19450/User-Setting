@@ -300,4 +300,85 @@ input[type="checkbox"] {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition
+  transition: all 0.15s ease;
+  display: inline-block;
+  ext-align: center;
+   }
+
+  .btn-close:hover {
+    background: linear-gradient(180deg, #5d6068, #4e5058);
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+
+  .btn-close:active {
+    transform: translateY(6px);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  #user23 {
+    margin-bottom: 16px;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+  .settings-box form {
+    padding: 22px;
+  }
+
+  .btn-open {
+    padding: 12px 22px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+  }
+
+  @media (max-width: 480px) {
+  .settings-box form {
+    padding: 18px;
+  }
+
+  .profile-upload-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .choice-group {
+    flex-wrap: wrap;
+  }
+
+  .action-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+  }
+
+  @media (max-width: 360px) {
+  .settings-box form {
+    padding: 14px;
+  }
+
+  .avatar-preview {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .profile-display-name {
+    font-size: 16px;
+  }
+  }
+ </style>
+</head>
